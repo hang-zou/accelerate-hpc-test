@@ -87,7 +87,7 @@ def training_function(config, args):
 
     tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
     datasets = load_dataset("glue", "mrpc")
-    metric = evaluate.load("glue", "mrpc")
+    metric = evaluate.load("glue", "mrpc", experiment_id=f"{accelerator.process_index}")
 
     def tokenize_function(examples):
         # max_length=None => use the model max length (it's actually the default)

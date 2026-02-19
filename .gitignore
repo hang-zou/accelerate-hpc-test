@@ -142,3 +142,12 @@ wandb
 
 # ruff
 .ruff_cache
+
+# Claude Code
+.claude/
+
+# Slurm logs
+examples/slurm/logs/
+
+# Training output
+examples/output/
